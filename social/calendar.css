@@ -1,0 +1,22 @@
+.back{
+  text-decoration: none;
+  float: left;
+  padding-left: 5vh;
+  padding-top: 7vh;
+}
+
+h1{
+  text-align: center;
+  padding-top: 5vh;
+}
+
+h2{
+  padding-top: 10vh;
+  text-align: center;
+}
+
+.daysInCalendar{
+  padding-right: 14vw;
+  float: left;
+  border: solid;
+}

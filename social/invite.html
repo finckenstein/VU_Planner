@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="calendar.css">
+  <title>Social space</title>
+</head>
+
+<body>
+  <a href="social_space.php">Back</a><br>
+
+  <h1>Invite To</h1>
+  <label>What: </label><input type="text" name="what" placeholder="activity"><br><br>
+  <label>Who: </label><input type="text" name="who" placeholder="invite"><br><br>
+  <label>Where: </label><input type="text" name="where" placeholder="location"><br><br>
+  <label>Date: </label><input type="date" name="when"><br><br>
+  <label>Time: </label><input type="time" name="time"><br><br>
+  <button type="submit" onclick="doNothing()">Send Invitation</button>
+
+</body>
+
+<script>
+  function doNothing(){
+    alert("Invitation has been send!");
+    window.location.href = "social_space.php";
+  }
+</script>
+
+
+</html>
