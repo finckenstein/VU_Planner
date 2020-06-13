@@ -26,49 +26,66 @@
   <title>This Weeks toDo List</title>
 </head>
 
-<body>
-  <a class="back" href="social_space.php">Back</a>
-  <h1>Social Calendar:</h1>
-  <h2>June 2020</h2>
+  <body>
+    <a class="back" href="social_space.php">Back</a>
+    <div class="month">
+    <ul>
+      <li>June 2020<br></li>
+    </ul>
+  </div>
+
+  <ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
   <?php
     $daysInCalendar = 30;
     $day = 0;
     $i = 0;
     if (mysqli_num_rows($result)==0){
       while ($day < $daysInCalendar){
-        ?><div class='daysInCalendar'><?php
-          echo $day + 1;
-          ?>
-        </div><?php
+        ?>
+        <ul class="daysInCalendar">
+          <li><?php echo $day + 1;?></li>
+        </ul>
+        <?php
         $day = $day + 1;
       }
     }
     else{
-      while ($day < $daysInCalendar){
-    ?>
-      <div class='daysInCalendar'>
-    <?php
-      echo $day + 1;?><br><?php
-      while ($i < count($eventDays)){
-        if($eventDays[$i][1] == $day){
-          if($eventDays[$i][2] == 1){?>
-            <a href="showEvent.php?id=<?php echo $eventDays[$i][0]?>">Appointment</a>
-          <?php
-          }
-          else{?>
-            <a href="showEvent.php?id=<?php echo $eventDays[$i][0]?>">Event Planned</a>
+      while ($day < $daysInCalendar){?>
+        <ul class="daysInCalendar">
+          <li><?php echo $day + 1;?>
         <?php
+        while ($i < count($eventDays)){
+          if($eventDays[$i][1] == $day+1){
+            if($eventDays[$i][2] == 1){?>
+              <a class="notification" href="showEvent.php?id=<?php echo $eventDays[$i][0]?>">A</a></li>
+            </ul>
+            <?php
+            }
+            else{?>
+              <a class="notification" href="showEvent.php?id=<?php echo $eventDays[$i][0]?>">E</a></li>
+            </ul>
+            <?php
+            }
           }
+          $i = $i + 1;
         }
-        $i = $i + 1;
-      }
-      $day = $day + 1;
-      $i =0;
-    ?>
-  </div>
+        $day = $day + 1;
+        $i =0;
+        ?>
+      </ul>
   <?php
     }
-  }?>
+  }
+  ?>
 
 </body>
 

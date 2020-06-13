@@ -1,0 +1,118 @@
+*{
+  margin: 0vw;
+  font-family: Verdana, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+}
+
+.back{
+  text-decoration: none;
+  font-size: 5vw;
+  border: solid;
+  padding: 1.5vw 2vw;
+  border-radius: 4vw;
+  background-color: #D4D4D5;
+  position:fixed;
+  top: 3vw;
+  left: 3vw
+}
+
+h1{
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 20vw;
+  font-size: 10vw;
+  padding-bottom: 2vh;
+  border-bottom: solid black;
+  background-color: #6986BA;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: auto;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.invitations{
+  padding-top: 5vw;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.invite{
+  padding-top: 5vw;
+  grid-area: 1 / 1 / 2 / 2;
+}
+.invitations > a, .invite > a, .viewCalendar > a{
+  text-decoration: none;
+  font-size: 4.25vw;
+  border: solid black;
+  padding: 2.75vw;
+  border-radius: 4vw;
+  color: white;
+  background-color: #4483CB;
+}
+h2{
+  font-size: 9vw;
+  padding-bottom: 2vw;
+  padding-top: 6vw;
+  padding-left: 3vw;
+}
+p{
+  padding: 2vh 0 5vh 5vw;
+}
+
+/* THIS STYLES THE TABLE: */
+#events {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 3.5vw;
+  border-top: solid;
+  border-bottom: solid;
+}
+#events td{
+  border: 0vw solid #ddd;
+  padding-top: 2.1vh;
+  padding-bottom: 2.1vh;
+}
+#events tr:nth-child(even){background-color: #f2f2f2;}
+#events tr:hover {background-color: #ddd;}
+
+.logos{
+  width: 20vw;
+}
+.eventTitle{
+  font-size: 5vw;
+  padding-left: 3vw;
+  display: block;
+  width: 30vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.viewCalendar{
+  text-align: center;
+  padding-top: 12vw;
+}
+.viewCalendar > a{
+  text-decoration: none;
+  font-size: 4.25vw;
+  border: solid black;
+  padding: 3vw 6vw;
+  border-radius: 4vw;
+  color: white;
+  background-color: #4483CB;
+}
+
+td > a{
+  font-size: 3.5vw;
+  text-transform: uppercase;
+}
+td > div.learnmore{
+  text-transform: uppercase;
+}

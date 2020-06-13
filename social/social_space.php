@@ -12,33 +12,65 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="social_space.css">
   <title>Social space</title>
 </head>
 
 <body>
-  <a href="../index.html">Back</a><br>
   <h1>Social Space</h1>
-  <a href="invitedTo.php"><?php echo $numOfInvitations; ?> Invitations to ...</a><br>
-  <a href="invite.html">Invite to ..</a>
-
-  <h3>Upcoming Events</h3>
-  <table>
-    <?php
+  <a class="back" href="../index.html">Back</a><br>
+  <div class="grid">
+    <div class="invitations">
+      <a href="invitedTo.php"><?php echo $numOfInvitations; ?> invitations</a><br>
+    </div>
+    <div class="invite">
+      <a href="invite.html">send invite</a>
+    </div>
+  </div>
+  <div>
+    <h2>Upcoming Events</h2>
+  </div>
+  <?php
+  if(mysqli_num_rows($result) == 0){?>
+    <p><i>New events and events you are not attending will be posted here</i></p><?php
+  }
+  else{?>
+  <table id="events"><?php
       while($rows = mysqli_fetch_assoc($result)){
     ?>
         <tr>
-          <td><?php echo $rows['name']; ?></td>
-          <td><?php echo $rows['studyAssociation']; ?></td>
+          <td class="eventTitle"><?php echo $rows['name']; ?></td>
+          <td>
+            <?php
+            if ($rows['studyAssociation'] == 'STORM'){?>
+              <img class='logos' src="STORM_logo.png">
+            <?php
+            }
+            else if($rows['studyAssociation'] == 'VU'){?>
+              <img class='logos' src="VU_logo.png">
+            <?php
+            }
+            else{
+              echo $rows['studyAssociation'];
+            }
+            ?>
+          </td>
           <td><?php echo $rows['eventDate']; ?></td>
-          <td><?php echo $rows['eventTime']; ?></td>
-          <td><a href="showEvent.php?id=<?php echo $rows['id']?>">More Info</a></td>
+          <td>
+            <div class="learnMore">
+              <a href="showEvent.php?id=<?php echo $rows['id']?>">learn<br>more</a>
+            </div>
+          </td>
         </tr>
     <?php
       }
+    }
     ?>
   </table>
 
-  <a href="social_calendar.php">View Social Calendar</a>
+  <div class="viewCalendar">
+    <a href="social_calendar.php">View Social Calendar</a>
+  </div>
 
 </body>
 

@@ -11,15 +11,18 @@
 
 <head>
   <title>Assignment Overview</title>
+  <link rel="stylesheet" type="text/css" href="showEvent.css">
 </head>
 
 <body>
-  <a href="social_space.php">Back</a>
+  <a class="back" href="social_space.php">Back</a>
   <h1><?php echo $rows['name']; ?></h1>
-  <p><?php echo  $rows['eventDescription']; ?></p>
-  <p>Date: <?php echo $rows['eventDate']; ?></p>
-  <p>Time: <?php echo $rows['eventTime']; ?></p>
-  <p>Location: <?php echo $rows['location']; ?></p>
+  <div class="description">
+    <p><?php echo  $rows['eventDescription']; ?></p>
+  </div>
+  <p class="date"><strong>Date: </strong><?php echo $rows['eventDate']; ?></p>
+  <p><strong>Time: </strong><?php echo $rows['eventTime']; ?></p>
+  <p><strong>Location: </strong><?php echo $rows['location']; ?></p>
 
   <?php
   if($rows['attends'] == '0'){?>

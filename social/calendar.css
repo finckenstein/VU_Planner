@@ -1,22 +1,80 @@
+*{
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
 .back{
   text-decoration: none;
   float: left;
-  padding-left: 5vh;
-  padding-top: 7vh;
-}
-
-h1{
-  text-align: center;
-  padding-top: 5vh;
-}
-
-h2{
-  padding-top: 10vh;
-  text-align: center;
+  font-size: 5vw;
+  border: solid;
+  background-color: white;
+  margin-top: 5vw;
+  margin-left: 2.5vw;
+  padding: 1.5vw;
+  border-radius: 4vw;
 }
 
 .daysInCalendar{
-  padding-right: 14vw;
   float: left;
-  border: solid;
+  border-left: solid;
+  border-bottom: solid;
+}
+
+/* INSERTED PRETTY STUFF*/
+
+ul {list-style-type: none;}
+
+/* Month header */
+.month {
+  padding: 25vw 10vw 10vw 10vw;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul li {
+  color: white;
+  font-size: 7vw;
+  text-transform: uppercase;
+  letter-spacing: 3vw;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 5vw 0vw 5vw 0vw;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  font-size: 6vw;
+  width: 13.25vw;
+  color: #666;
+  text-align: center;
+  border-left: solid;
+}
+
+/* Days (1-31) */
+.daysInCalendar {
+  padding: 8vw 0vw;
+  background: #eee;
+  margin: 0;
+}
+
+.daysInCalendar li {
+  list-style-type: none;
+  width: 13.90vw;
+  text-align: center;
+  font-size: 2.5vh;
+  color: #777;
+}
+.notification{
+  background-color: red;
+  border-radius: 1vw;
+  font-size: 1.75vh;
+  position: absolute;
+  color: white;
 }

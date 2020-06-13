@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+}
+.back{
+  text-decoration: none;
+  font-size: 5vw;
+  border: solid;
+  padding: 1.5vw 2vw;
+  border-radius: 4vw;
+  background-color: #D4D4D5;
+  position:fixed;
+  top: 3vw;
+  left: 3vw
+}
+
+h1{
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 20vw;
+  font-size: 10vw;
+  padding-bottom: 2vh;
+  border-bottom: solid black;
+  background-color: #6986BA;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 75vw 25vw;
+  grid-template-rows: auto;
+  padding: 3vw 0;
+  font-size: 3.5vw;
+}
+.textInvitation{
+  padding-top: 3vh;
+  grid-area: 1 / 1 / 2 / 2;
+  padding-left: 2vw;
+}
+.respond{
+  padding-top: 3vh;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.decline, .accept{
+  padding-bottom: 3vh;
+}
+.accept{
+  padding-top: 1.5vh;
+}
+.accept > a, .decline > a{
+  font-size: 3vw;
+  border: solid black;
+  padding: 1vw;
+  border-radius: 4vw;
+  color: white;
+  background-color: #4483CB;
+}
+.decline > a{
+  background-color: red;
+}
+.accept > a{
+  background-color: green;
+}

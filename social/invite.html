@@ -2,20 +2,23 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="calendar.css">
+  <link rel="stylesheet" type="text/css" href="invite.css">
   <title>Social space</title>
 </head>
 
 <body>
-  <a href="social_space.php">Back</a><br>
 
   <h1>Invite To</h1>
-  <label>What: </label><input type="text" name="what" placeholder="activity"><br><br>
-  <label>Who: </label><input type="text" name="who" placeholder="invite"><br><br>
-  <label>Where: </label><input type="text" name="where" placeholder="location"><br><br>
-  <label>Date: </label><input type="date" name="when"><br><br>
-  <label>Time: </label><input type="time" name="time"><br><br>
-  <button type="submit" onclick="doNothing()">Send Invitation</button>
+  <a class="back" href="social_space.php">Back</a><br>
+
+  <ul>
+    <li><label class="first"><strong>What: </strong></label><input type="text" name="what" placeholder="activity"><br><br></li>
+    <li><label><strong>Who: </strong></label><input type="text" name="who" placeholder="invite"><br><br></li>
+    <li><label><strong>Where: </strong></label><input type="text" name="where" placeholder="location"><br><br></li>
+    <li><strong><label>Date:</strong></label><input type="date" name="when"><br><br></li>
+    <li><label><strong>Time:</strong></label><input type="time" name="time"><br><br></li>
+    <li><button type="submit" onclick="doNothing()">Send Invitation</button></li>
+  </ul>
 
 </body>
 
