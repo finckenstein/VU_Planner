@@ -32,13 +32,23 @@
   <h2>June 2020</h2>
   <?php
     $daysInCalendar = 30;
-    $day = 1;
+    $day = 0;
     $i = 0;
-    while ($day <= $daysInCalendar){
-  ?>
-  <div class='daysInCalendar'>
+    if (mysqli_num_rows($result)==0){
+      while ($day < $daysInCalendar){
+        ?><div class='daysInCalendar'><?php
+          echo $day + 1;
+          ?>
+        </div><?php
+        $day = $day + 1;
+      }
+    }
+    else{
+      while ($day < $daysInCalendar){
+    ?>
+      <div class='daysInCalendar'>
     <?php
-      echo $day;?><br><?php
+      echo $day + 1;?><br><?php
       while ($i < count($eventDays)){
         if($eventDays[$i][1] == $day){
           if($eventDays[$i][2] == 1){?>
@@ -57,7 +67,8 @@
     ?>
   </div>
   <?php
-    }?>
+    }
+  }?>
 
 </body>
 

@@ -51,7 +51,7 @@
     }
     else {
       alert('You successfully submitted the assignment!');
-      window.location.href = "menu.html";
+      window.location.href = "menu.php";
     }
   }
 </script>
