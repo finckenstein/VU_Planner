@@ -2,30 +2,33 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="setReminder.css">
   <title>Set Reminders</title>
 </head>
 
 <body>
-  <a href="menu.php">Back</a>
   <h1>Set Reminders</h1>
+  <a class="back" href="menu.php">Back</a>
 
   <form>
-    <label for="beforeDeadline">7 Days before Deadline</label>
-    <select name="beforeDeadline" id="beforeDeadline">
-      <option value="none">None</option>
-      <option value="everyTwoDays">Every Two Days</option>
-      <option value="onceADay">Once a Day</option>
-      <option value="twiceADays">Twice a Day</option>
-    </select>
-    <br><br><br>
-    <label for="onDeadline">On the Day of the Deadline</label>
-    <select name="onDeadline" id="onDeadline">
-      <option value="none">None</option>
-      <option value="once">Once 6 hours before dealine</option>
-      <option value="everyTwoHour">Every two Hours</option>
-      <option value="everyHour">Every Hour</option>
-    </select>
-    <button type="button" onclick="nothing()">Configure Reminder</button>
+    <ul>
+      <li><label for="beforeDeadline">7 Days before Deadline</label><br>
+      <select name="beforeDeadline" id="beforeDeadline">
+        <option value="none">None</option>
+        <option value="everyTwoDays">Every Two Days</option>
+        <option value="onceADay">Once a Day</option>
+        <option value="twiceADays">Twice a Day</option>
+      </select></li>
+      <br><br><br>
+      <li><label for="onDeadline">On the Day of the Deadline</label><br>
+      <select name="onDeadline" id="onDeadline">
+        <option value="none">None</option>
+        <option value="once">Once 6 hours before dealine</option>
+        <option value="everyTwoHour">Every two Hours</option>
+        <option value="everyHour">Every Hour</option>
+      </select></li>
+      </ul>
+      <div class="config"><button type="button" onclick="nothing()">Configure Reminder</button></div>
   </form>
   <script>
     function nothing(){

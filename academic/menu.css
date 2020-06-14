@@ -1,0 +1,45 @@
+*{
+  margin: 0vw;
+  font-family: Verdana, sans-serif;
+}
+a{
+  text-decoration: none;
+  font-size: 7vw;
+  border-radius: 3vw;
+  border: solid black;
+  padding: 1.5vh 2vw;
+}
+a:visited{
+  color: black;
+}
+
+.back{
+  text-decoration: none;
+  font-size: 5vw;
+  border: solid;
+  padding: 1.5vw 2vw;
+  border-radius: 4vw;
+  background-color: #D4D4D5;
+  position:fixed;
+  top: 3vw;
+  left: 3vw
+}
+
+h1{
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 20vw;
+  font-size: 10vw;
+  padding-bottom: 2vh;
+  border-bottom: solid black;
+  background-color: #6986BA;
+}
+ul{
+  list-style: none;
+  text-align: center;
+}
+li{
+  padding-bottom: 5vh;
+  padding-top: 2vh;
+}

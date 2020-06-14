@@ -8,15 +8,15 @@
 <html lang="en">
 
 <head>
-  <title>Submitted Assignments</title>
+  <link rel="stylesheet" type="text/css" href="submittedAssignment.css">
+  <title>Submitted</title>
 </head>
 
 <body>
-  <h1>Submitted Assignments</h1>
-  <a class="button" href="menu.php">Back</a>
-  <table>
+  <h1>Submitted</h1>
+  <a class="back" href="menu.php">Back</a>
+  <table id="events">
     <tr>
-      <th><h4>Course:</h4></th>
       <th><h4>Name:</h4></th>
       <th><h4>Deadline:</h4></th>
       <th><h4>Info: </h4></th>
@@ -25,10 +25,9 @@
       while($rows = mysqli_fetch_assoc($result)){
     ?>
         <tr>
-          <td><?php echo $rows['course']; ?></td>
           <td><?php echo $rows['name']; ?></td>
           <td><?php echo $rows['deadline']; ?></td>
-          <td><a href="assignmentOverview.php?id=<?php echo $rows['id']?>">Overview</a></td>
+          <td class="overview"><a href="assignmentOverview.php?id=<?php echo $rows['id']?>">Overview</a></td>
         </tr>
     <?php
       }

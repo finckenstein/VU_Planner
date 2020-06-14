@@ -8,15 +8,15 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="toDoLists.css">
   <title>End of Block toDo List</title>
 </head>
 
 <body>
-  <h1>End of Block toDo List</h1>
-  <a class="button" href="menu.php">Back</a>
-  <table>
+  <h1>All toDo</h1>
+  <a class="back" href="menu.php">Back</a>
+  <table id="events">
     <tr>
-      <th><h4>Course:</h4></th>
       <th><h4>Name:</h4></th>
       <th><h4>Deadline:</h4></th>
       <th><h4>Info: </h4></th>
@@ -25,16 +25,17 @@
       while($rows=mysqli_fetch_assoc($result)){
         ?>
         <tr>
-          <td><?php echo $rows['course']; ?></td>
           <td><?php echo $rows['name']; ?></td>
           <td><?php echo $rows['deadline']; ?></td>
-          <td><a href="assignmentOverview.php?id=<?php echo $rows['id']?>">Overview</a></td>
+          <td class="overview"><a href="assignmentOverview.php?id=<?php echo $rows['id']?>">Overview</a></td>
         </tr>
       <?php } ?>
   </table>
 
-  <a href="add_assignment.html">Add Personal Assignment</a><br>
-  <a href="setReminder.html">Set Reminder</a><br>
+  <div class="navigation">
+    <div class="addAss"><a href="add_assignment.html">Add Assignment</a><br></div>
+    <div class="setReminder"><a href="setReminder.html">Set Reminder</a><br></div>
+  </div>
 </body>
 
 </html>

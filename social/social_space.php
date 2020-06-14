@@ -40,6 +40,7 @@
     ?>
         <tr>
           <td class="eventTitle"><?php echo $rows['name']; ?></td>
+          <td><?php echo $rows['eventDate']; ?></td>
           <td>
             <?php
             if ($rows['studyAssociation'] == 'STORM'){?>
@@ -55,12 +56,7 @@
             }
             ?>
           </td>
-          <td><?php echo $rows['eventDate']; ?></td>
-          <td>
-            <div class="learnMore">
-              <a href="showEvent.php?id=<?php echo $rows['id']?>">learn<br>more</a>
-            </div>
-          </td>
+          <td class="learnMore"><a href="showEvent.php?id=<?php echo $rows['id']?>">learn<br>more</a></td>
         </tr>
     <?php
       }

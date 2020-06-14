@@ -1,0 +1,75 @@
+*{
+  margin: 0vw;
+  font-family: Verdana, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+}
+.back{
+  text-decoration: none;
+  font-size: 5vw;
+  border: solid;
+  background-color: white;
+  padding: 1.5vw 2vw;
+  border-radius: 4vw;
+  background-color: #D4D4D5;
+  position:fixed;
+  top: 3vw;
+  right: 3vw
+}
+
+h1{
+  padding: 20vw 0 0vw 5vw;
+  font-size: 3.5vh;
+  text-decoration: underline;
+  height: 8vh;
+  overflow: auto;
+  padding-left: 2vw;
+}
+.description{
+  border: solid;
+  padding:1vw;
+  width: 95vw;
+  height: 38vh;
+  overflow: auto;
+  text-align:justify;
+  border: solid;
+  padding-left: 2vw;
+}
+p{
+  padding-left: 2vw;
+  font-size: 2vh;
+  padding-top: 3vh;
+}
+#chooseFile{
+  padding-left: 5vw;
+  padding-top: 1vh;
+  font-size: 4.5vw;
+}
+.styleButton{
+  padding-top: 4vh;
+  text-align: center;
+}
+button{
+  padding: 1vw;
+  border-radius: 3vw;
+  font-size: 6vw;
+  background-color: #4483CB;
+  color: white;
+}
+#myfile{
+  font-size: 2vh;
+}
+#chooseFile > div > a{
+  padding: 1vw;
+  border-radius: 3vw;
+  font-size: 5vw;
+  background-color: #4483CB;
+  color: white;
+}
+.actualSubmit{
+  text-align: center;
+}

@@ -9,32 +9,38 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="assignmentOverview.css">
   <title>Assignment Overview</title>
 </head>
 
 <body>
-  <a href="menu.php">Back</a>
   <h1><?php echo $rows['name'];; ?></h1>
-  <p>Course: <?php echo $rows['course']; ?></p>
-  <p>Description: <?php echo $rows['description']; ?></p>
-  <p>Deadline: <?php echo $rows['deadline']; ?></p>
-  <p>Time: <?php echo $rows['atTime']; ?></p>
+  <a class="back" href="menu.php">Back</a>
+  <p><b>Course:</b> <?php echo $rows['course']; ?></p>
+  <p><b>Description:</b></p>
+  <p class="description"> <?php echo $rows['description']; ?></p>
+  <p><b>Deadline:</b> <?php echo $rows['deadline']; ?></p>
+  <p><b>Time:</b> <?php echo $rows['atTime']; ?></p>
 
   <?php
   if($rows['submitted'] == 1){?>
-    <p>Allready Submitted Assignment</p>
+    <p id="alreadySubmitted"><i>All ready Submitted Assignment</i></p>
   <?php
   }
   if($rows['personal'] == 0){?>
     <form id='chooseFile' style='display: none;'>
-      <label>Select a file: </label><input type="file" id="myfile" name="myfile"><br><br>
-      <a href="../DBhandler/submit.php?id=<?php echo $rows['id']?>">Submit</a>
+      <label>Select a file: <br></label><input type="file" id="myfile" name="myfile"></input><br><br>
+      <div class="actualSubmit">
+        <a href="../DBhandler/submit.php?id=<?php echo $rows['id']?>">Submit</a>
+      </div>
     </form>
-    <button id='submitButton' type="button" onclick="chooseFile()">Submit</button>
+    <div class="styleButton">
+      <button id='submitButton' type="button" onclick="chooseFile()">Submit</button>
+    </div>
   <?php
   }
   else{?>
-    <p><i>assignment cannot be handed in because it is a personal assignment.</i></p>
+    <p><i>Assignment cannot be handed in because it is personal.</i></p>
   <?php
   }
   ?>
@@ -48,6 +54,8 @@
       file.style.display = "block";
       var button = document.getElementById("submitButton");
       button.style.display = "none";
+      var text = document.getElementById("alreadySubmitted");
+      text.style.display = "none";
     }
     else {
       alert('You successfully submitted the assignment!');

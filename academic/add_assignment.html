@@ -2,20 +2,24 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="addAssignment.css">
   <title>This Weeks toDo List</title>
 </head>
 
 <body>
-  <a href="menu.php">Back</a>
-  <h1>Add Personal Assignment</h1>
+  <h1>Add Assignment</h1>
+  <a class="back" href="menu.php">Back</a>
 
   <form action="../DBhandler/addAss.php" method="POST">
-    <label> Course: </label><input type="text" name="course" placeholder="course"><br><br>
-    <label> Name: </label><input type="text" name="name" placeholder="name"><br><br>
-    <label> Description: </label><input type="text" name="description" placeholder="description"><br><br>
-    <label> Due Date: </label><input type="date" name="deadline" placeholder="deadline">
-    <label>  at: </label><input type="time" name="atTime" placeholder="time"><br><br>
-    <button type="submit" name="submit">Add Assignment</button>
+    <ul>
+    <li><label><b>Course: </b></label><input type="text" name="course" placeholder="course"><br><br></li>
+    <li><label><b>Name: </b></label><input type="text" name="name" placeholder="name"><br><br></li>
+    <li><label><b>Description: </b></label>
+      <textarea placeholder="description" type="text" name="description" rows="10" cols="50"></textarea></li>
+    <li><label><b>Due Date: </b></label><input type="date" name="deadline" placeholder="deadline"></li>
+    <li><label><b>Time: </b></label><input type="time" name="atTime" placeholder="time"><br><br></li>
+    <li class="addButton"><button type="submit" name="submit">Add Assignment</button></li>
+    <ul>
   </form>
 
 </body>

@@ -31,7 +31,7 @@ h1{
 }
 p{
   padding: 0 5vw;
-  font-size: 4.25vw;
+  font-size: 5vw;
 }
 div.description > p{
   font-size: 3.5vw;
@@ -39,7 +39,7 @@ div.description > p{
 div.description {
     padding:5vw;
     width: 95vw;
-    height: 60vh;
+    height: 40vh;
     overflow: auto;
     text-align:justify;
     border: solid;

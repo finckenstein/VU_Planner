@@ -8,21 +8,21 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="viewChanges.css">
   <title>This Weeks toDo List</title>
 </head>
 
 <body>
-  <h1>Updates Assignments</h1>
-  <a class="button" href="menu.php">Back</a>
+  <h1>Updates</h1>
+  <a class="back" href="menu.php">Back</a>
   <?php
   if(mysqli_num_rows($result) == 0){?>
     <p><i>Assignment feed already checked. Existing assignments can be found in todo lists</i></p>
   <?php
   }
   else{?>
-    <table>
+    <table id="events">
       <tr>
-        <th><h4>Course:</h4></th>
         <th><h4>Name:</h4></th>
         <th><h4>Deadline:</h4></th>
         <th><h4>Info: </h4></th>
@@ -32,11 +32,12 @@
         while($rows = mysqli_fetch_assoc($result)){
       ?>
           <tr>
-            <td><?php echo $rows['course']; ?></td>
             <td><?php echo $rows['name']; ?></td>
             <td><?php echo $rows['deadline']; ?></td>
-            <td><a href="assignmentOverview.php?id=<?php echo $rows['id']?>">Overview</a></td>
-            <td><a href="../DBhandler/setNewToFalse.php?id=<?php echo $rows['id']?>">I'm aware!</a></td>
+            <td class="grid">
+              <div class="overview"><a href="assignmentOverview.php?id=<?php echo $rows['id']?>">Overview</a></div>
+              <div class="gotIt"><a href="../DBhandler/setNewToFalse.php?id=<?php echo $rows['id']?>">got it!</a></div>
+            </td>
           </tr>
       <?php
         }

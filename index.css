@@ -1,0 +1,32 @@
+*{
+  margin: 0vw;
+  font-family: Verdana, sans-serif;
+}
+a{
+  text-decoration: none;
+  font-size: 10vw;
+  border-radius: 3vw;
+  border: solid black;
+  padding: 3vh 5vw;
+}
+a:visited{
+  color: black;
+}
+h1{
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 20vw;
+  font-size: 10vw;
+  padding-bottom: 2vh;
+  border-bottom: solid black;
+  background-color: #6986BA;
+}
+ul{
+  padding-top: 5vh;
+  list-style: none;
+  text-align: center;
+}
+li{
+  padding-top: 15vh;
+}
