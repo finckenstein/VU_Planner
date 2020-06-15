@@ -22,7 +22,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="calendar.css">
+  <link rel="stylesheet" type="text/css" href="socialCSS/calendar.css">
   <title>This Weeks toDo List</title>
 </head>
 
@@ -64,17 +64,9 @@
           <li><?php echo $day + 1;?>
         <?php
         while ($i < count($eventDays)){
-          if($eventDays[$i][1] == $day+1){
-            if($eventDays[$i][2] == 1){?>
-              <a class="notification" href="showEvent.php?id=<?php echo $eventDays[$i][0]?>">A</a></li>
-            </ul>
-            <?php
-            }
-            else{?>
-              <a class="notification" href="showEvent.php?id=<?php echo $eventDays[$i][0]?>">E</a></li>
-            </ul>
-            <?php
-            }
+          if($eventDays[$i][1] == $day+1){?>
+              <li><a class="notification" href="showEvent.php?id=<?php echo $eventDays[$i][0]?>">&#42;</a></li>
+          <?php
           }
           $i = $i + 1;
         }

@@ -23,7 +23,7 @@ a:visited{
 
 h1{
   padding: 20vw 0 0vw 5vw;
-  font-size: 3.5vh;
+  font-size: 8vw;
   text-decoration: underline;
   height: 8vh;
   overflow: auto;
@@ -42,7 +42,7 @@ h1{
 p{
   padding-left: 2vw;
   font-size: 2vh;
-  padding-top: 3vh;
+  padding-top: 1.5vh;
 }
 #chooseFile{
   padding-left: 5vw;

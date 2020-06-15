@@ -1,13 +1,12 @@
 *{
-  margin: 0;
+  margin: 0vw;
   font-family: Verdana, sans-serif;
 }
-a{
-  text-decoration: none;
-}
+
 a:visited{
   color: black;
 }
+
 .back{
   text-decoration: none;
   font-size: 5vw;
@@ -26,30 +25,29 @@ h1{
   color: white;
   padding-top: 20vw;
   font-size: 10vw;
-  padding-bottom: 2vh;
+  padding-bottom: 3.5vh;
   border-bottom: solid black;
   background-color: #6986BA;
 }
 ul{
   list-style-type:none;
   padding-top: 5vh;
-}
-li{
-  padding: 1vh 0;
-}
-label{
-  font-size: 6vw;
-  padding-left: 4vw;
-  padding-top: 5vh;
-  padding-bottom: 10vh;
-}
-input:hover{
-  background-color: #E9E9EA;
-}
-input{
   font-size: 5vw;
+  padding-left: 5vw;
+}
+input, textarea{
+  width: 80vw;
+  font-size: 5vw;
+  border: solid;
 }
 button{
   font-size: 6vw;
-  padding: 1.5vw;
+  padding: 2vw;
+  border-radius: 3vw;
+  background-color: #4483CB;
+    color: white;
+}
+.addButton{
+  padding-top: 1vh;
+  text-align: center;
 }

@@ -8,7 +8,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="submittedAssignment.css">
+  <link rel="stylesheet" type="text/css" href="academicCSS/submittedAssignment.css">
   <title>Submitted</title>
 </head>
 

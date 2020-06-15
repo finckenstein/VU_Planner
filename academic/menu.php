@@ -10,7 +10,7 @@ $numOfChanges = mysqli_num_rows($result);
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="menu.css">
+  <link rel="stylesheet" type="text/css" href="academicCSS/menu.css">
   <title>ToDo List</title>
 </head>
 
@@ -22,7 +22,15 @@ $numOfChanges = mysqli_num_rows($result);
     <li><a href="thisWeek.php">ToDo this Week</a><br></li>
     <li><a href="thisMonths.php">ToDo this Month</a><br></li>
     <li><a href="endOfBlock.php">ToDo end of Block</a><br></li>
-    <li><a href="viewChanges.php"><?php echo $numOfChanges; ?> added/changes</a><br></li>
+      <?php
+      if($numOfChanges == 0){?>
+          <li><a href="viewChanges.php"><?php echo $numOfChanges; ?> added/changes</a><br></li>
+      <?php
+      }
+      else{?>
+      <li><a href="viewChanges.php"><span style="color: white;background-color:red; border-radius: 3vw; padding: 1vw"><?php echo $numOfChanges; ?></span> added/changes</a><br></li>
+      <?php
+      }?>
   </ul>
 
 </body>

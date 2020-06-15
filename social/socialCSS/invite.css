@@ -1,12 +1,13 @@
 *{
-  margin: 0vw;
+  margin: 0;
   font-family: Verdana, sans-serif;
 }
-
+a{
+  text-decoration: none;
+}
 a:visited{
   color: black;
 }
-
 .back{
   text-decoration: none;
   font-size: 5vw;
@@ -25,34 +26,37 @@ h1{
   color: white;
   padding-top: 20vw;
   font-size: 10vw;
-  padding-bottom: 3.5vh;
+  padding-bottom: 2vh;
   border-bottom: solid black;
   background-color: #6986BA;
 }
 ul{
   list-style-type:none;
   padding-top: 5vh;
-  font-size: 5vw;
-  padding-left: 7vw;
 }
 li{
-  padding-top: 5vh;
+  padding: 1vh 0;
 }
-select{
-  width: 80vw;
+label{
+  font-size: 6vw;
+  padding-left: 4vw;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+}
+input:hover{
+  background-color: #E9E9EA;
+}
+input{
   font-size: 5vw;
-  border: solid;
 }
 button{
-  font-size: 6vw;
-  padding: 2vw;
-  border-radius: 3vw;
-  background-color: #4483CB;
+    border-radius: 3vw;
+    font-size: 6vw;
+    padding: 2vw;
+    background-color: #4483CB;
+    color: white;
 }
-.config{
-  text-align: center;
-  padding-top: 10vh;
-}
-.select-selected {
-  background-color: DodgerBlue;
+.send{
+    padding-top: 5vh;
+    text-align: center;
 }

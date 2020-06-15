@@ -8,7 +8,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="viewChanges.css">
+  <link rel="stylesheet" type="text/css" href="academicCSS/viewChanges.css">
   <title>This Weeks toDo List</title>
 </head>
 

@@ -8,8 +8,8 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="invitations.css">
-  <title>Invitations</title>
+  <link rel="stylesheet" type="text/css" href="socialCSS/invitations.css">
+  <title>Invitation Feed</title>
 </head>
 
 <body>

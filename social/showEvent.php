@@ -11,7 +11,7 @@
 
 <head>
   <title>Assignment Overview</title>
-  <link rel="stylesheet" type="text/css" href="showEvent.css">
+  <link rel="stylesheet" type="text/css" href="socialCSS/showEvent.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
   <?php
   if($rows['attends'] == '0'){?>
     <form method="POST">
-      <input type="submit" name="eventAdded" value="Add to Social Calendar"><br/>
+      <input type="submit" name="eventAdded" value="Add to Calendar"><br/>
     </form>
     <?php
     if(array_key_exists('eventAdded',$_POST)){
@@ -58,7 +58,7 @@
     }
     else{?>
       <form method="POST">
-        <input type="submit" name="removeEvent" value="Remove from social calendar"><br/>
+        <input type="submit" name="removeEvent" value="Remove from calendar"><br/>
       </form>
     <?php
       if(array_key_exists('removeEvent',$_POST)){

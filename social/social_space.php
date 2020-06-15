@@ -12,7 +12,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="social_space.css">
+  <link rel="stylesheet" type="text/css" href="socialCSS/social_space.css">
   <title>Social space</title>
 </head>
 
@@ -21,7 +21,15 @@
   <a class="back" href="../index.html">Back</a><br>
   <div class="grid">
     <div class="invitations">
-      <a href="invitedTo.php"><?php echo $numOfInvitations; ?> invitations</a><br>
+        <?php
+        if($numOfInvitations == 0){?>
+            <a href="invitedTo.php"><?php echo $numOfInvitations; ?> invitations</a><br>
+        <?php
+        }
+        else{?>
+        <a href="invitedTo.php"><span style="background-color:red; border-radius:3vw; padding: 1vw;"><?php echo $numOfInvitations; ?></span> invitations</a><br>
+        <?php
+        }?>
     </div>
     <div class="invite">
       <a href="invite.html">send invite</a>
@@ -39,7 +47,7 @@
       while($rows = mysqli_fetch_assoc($result)){
     ?>
         <tr>
-          <td class="eventTitle"><?php echo $rows['name']; ?></td>
+          <td class="eventTitle"><a href="showEvent.php?id=<?php echo $rows['id']?>"><?php echo $rows['name']; ?></a></td>
           <td><?php echo $rows['eventDate']; ?></td>
           <td>
             <?php
@@ -56,7 +64,6 @@
             }
             ?>
           </td>
-          <td class="learnMore"><a href="showEvent.php?id=<?php echo $rows['id']?>">learn<br>more</a></td>
         </tr>
     <?php
       }

@@ -32,10 +32,13 @@ h1{
 ul{
   list-style-type:none;
   padding-top: 5vh;
-  font-size: 5vw;
-  padding-left: 5vw;
+  font-size: 5.5vw;
+  padding-left: 7vw;
 }
-input, textarea{
+li{
+  padding-top: 5vh;
+}
+select{
   width: 80vw;
   font-size: 5vw;
   border: solid;
@@ -45,8 +48,12 @@ button{
   padding: 2vw;
   border-radius: 3vw;
   background-color: #4483CB;
+    color: white;
 }
-.addButton{
-  padding-top: 1vh;
+.config{
   text-align: center;
+  padding-top: 10vh;
+}
+.select-selected {
+  background-color: DodgerBlue;
 }
