@@ -1,6 +1,6 @@
 <?php
   include_once '../DBhandler/connection.php';
-  $sql = "SELECT * FROM VUEvent WHERE attends = '0' AND private = '1' AND(eventDate BETWEEN CURDATE() AND '2020-06-30') ORDER BY eventDate ASC;";
+  $sql = "SELECT * FROM VUEvent WHERE attends = '0' AND private = '1' AND(eventDate BETWEEN 2020-06-9 AND '2020-06-30') ORDER BY eventDate ASC;";
   $result = mysqli_query($conn, $sql);
 ?>
 
@@ -14,7 +14,7 @@
 
 <body>
   <h1>Invitations</h1>
-  <a class="back" href="social_space.php">Back</a><br>
+  <a class="back" href="social_space.php">&#8678;</a><br>
   <?php
   while($rows = mysqli_fetch_assoc($result)){
   ?>

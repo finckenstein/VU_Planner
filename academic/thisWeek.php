@@ -14,7 +14,7 @@
 
 <body>
   <h1>Weeks toDo</h1>
-  <a class="back" href="menu.php">Back</a>
+  <a class="back" href="menu.php">&#8678;</a>
   <table id="events">
     <tr>
       <th><h4>Name:</h4></th>

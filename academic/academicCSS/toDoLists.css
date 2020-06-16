@@ -9,14 +9,14 @@ a:visited{
 
 .back{
   text-decoration: none;
-  font-size: 5vw;
+  font-size: 7vw;
+  padding: 1vw 1.5vw;
   border: solid;
-  padding: 1.5vw 2vw;
-  border-radius: 4vw;
-  background-color: #D4D4D5;
   position:fixed;
-  top: 3vw;
-  left: 3vw
+  top: 5vw;
+  left: 3vw;
+  background-color: white;
+  border-radius: 3vw;
 }
 
 h1{
@@ -32,11 +32,11 @@ h1{
 /* THIS STYLES THE TABLE: */
 #events {
   border-collapse: collapse;
-  font-size: 4vw;
+  font-size: 4.5vw;
   border-top: solid;
   border-bottom: solid;
   overflow-y:scroll;
-  height: 67vh;
+  height: 63vh;
   display:block;
   width: 100vw;
   text-align: center;
@@ -55,10 +55,11 @@ h1{
 .overview > a{
   background-color: #FFD800;
   text-decoration: none;
-  font-size: 3.75vw;
+  font-size: 3.5vw;
   border-radius: 3vw;
   border: solid black;
   padding: 1vw;
+    text-transform: uppercase;
 }
 #events tr:nth-child(even){background-color: #f2f2f2;}
 #events tr:hover {background-color: #ddd;}
@@ -71,6 +72,7 @@ h1{
   text-align: center;
 }
 .addAss{
+    padding-left: 2vw;
   grid-area: 1 / 1 / 2 / 2;
 }
 .setReminder{
@@ -82,6 +84,6 @@ h1{
   border-radius: 3vw;
   border: solid black;
   padding: 2.5vw;
-  background-color: #4483CB;
+  background-color: #6986BA;
   color: white;
 }

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <a class="back" href="social_space.php">Back</a>
+  <a class="back" href="social_space.php">&#8680;</a>
   <h1><?php echo $rows['name']; ?></h1>
   <div class="description">
     <p><?php echo  $rows['eventDescription']; ?></p>

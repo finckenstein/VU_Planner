@@ -11,14 +11,14 @@ a:visited{
 
 .back{
   text-decoration: none;
-  font-size: 5vw;
+  font-size: 7vw;
+  padding: 1vw 1.5vw;
   border: solid;
-  padding: 1.5vw 2vw;
-  border-radius: 4vw;
-  background-color: #D4D4D5;
   position:fixed;
   top: 3vw;
-  left: 3vw
+  left: 3vw;
+  background-color: white;
+  border-radius: 3vw;
 }
 
 h1{
@@ -37,15 +37,15 @@ h1{
   grid-template-columns: 50vw 50vw;
   grid-template-rows: auto;
   text-align: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+    padding-top: 3vh;
+  padding-bottom: 4vh;
 }
 .invitations{
-  padding-top: 5vw;
+  padding-top: 1vh;
   grid-area: 1 / 2 / 2 / 3;
 }
 .invite{
-  padding-top: 5vw;
+  padding-top: 1vh;
   grid-area: 1 / 1 / 2 / 2;
 }
 .invitations > a, .invite > a, .viewCalendar > a{
@@ -55,7 +55,7 @@ h1{
   padding: 2.75vw;
   border-radius: 4vw;
   color: white;
-  background-color: #4483CB;
+  background-color: #6986BA;
 }
 h2{
   font-size: 9vw;
@@ -114,7 +114,7 @@ p{
   padding: 3vw 6vw;
   border-radius: 4vw;
   color: white;
-  background-color: #4483CB;
+  background-color: #6986BA;
 }
 .learnMore > a{
   text-transform: uppercase;

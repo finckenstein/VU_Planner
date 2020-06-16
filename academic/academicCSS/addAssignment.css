@@ -9,14 +9,14 @@ a:visited{
 
 .back{
   text-decoration: none;
-  font-size: 5vw;
+  font-size: 7vw;
+  padding: 1vw 1.5vw;
   border: solid;
-  padding: 1.5vw 2vw;
-  border-radius: 4vw;
-  background-color: #D4D4D5;
   position:fixed;
-  top: 3vw;
-  left: 3vw
+  top: 5vw;
+  left: 3vw;
+  background-color: white;
+  border-radius: 3vw;
 }
 
 h1{
@@ -44,8 +44,9 @@ button{
   font-size: 6vw;
   padding: 2vw;
   border-radius: 3vw;
-  background-color: #4483CB;
+  background-color: #6986BA;
     color: white;
+    border: solid black;
 }
 .addButton{
   padding-top: 1vh;

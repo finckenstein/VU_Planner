@@ -16,22 +16,22 @@ $numOfChanges = mysqli_num_rows($result);
 
 <body>
   <h1>ToDo List</h1>
-  <ul>
-    <li><a class="back" class="button" href="../">Back</a><br></li>
-    <li><a href="submittedAssignments.php">Submitted</a><br></li>
-    <li><a href="thisWeek.php">ToDo this Week</a><br></li>
-    <li><a href="thisMonths.php">ToDo this Month</a><br></li>
-    <li><a href="endOfBlock.php">ToDo end of Block</a><br></li>
+  <a class="back" class="button" href="../">&#8678;</a>
+  <div class="grid">
+    <div class="submitted"><a href="submittedAssignments.php">Submitted</a><br></div>
+    <div class="week"><a href="thisWeek.php">ToDo this Week</a><br></div>
+    <div class="month"><a href="thisMonths.php">ToDo this Month</a><br></div>
+    <div class="block"><a href="endOfBlock.php">ToDo end of Block</a><br></div>
       <?php
       if($numOfChanges == 0){?>
-          <li><a href="viewChanges.php"><?php echo $numOfChanges; ?> added/changes</a><br></li>
+          <div class="changes"><a href="viewChanges.php">added/changes <?php echo $numOfChanges; ?></a><br></div>
       <?php
       }
       else{?>
-      <li><a href="viewChanges.php"><span style="color: white;background-color:red; border-radius: 3vw; padding: 1vw"><?php echo $numOfChanges; ?></span> added/changes</a><br></li>
+        <div class="changes"><a href="viewChanges.php">added/changes <span style="color: white;background-color:red; border-radius: 3vw; padding: 1vw; border: solid black"><?php echo $numOfChanges; ?></span></a><br></div>
       <?php
       }?>
-  </ul>
+    </div>
 
 </body>
 

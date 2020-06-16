@@ -14,7 +14,7 @@
 
 <body>
   <h1>Updates</h1>
-  <a class="back" href="menu.php">Back</a>
+  <a class="back" href="menu.php">&#8678;</a>
   <?php
   if(mysqli_num_rows($result) == 0){?>
     <p><i>Assignment feed already checked. Existing assignments can be found in todo lists</i></p>

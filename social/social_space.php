@@ -1,9 +1,9 @@
 <?php
   include_once '../DBhandler/connection.php';
-  $sql = "SELECT * FROM VUEvent WHERE attends = '0' AND private = '0' AND (eventDate BETWEEN CURDATE() AND '2020-06-30') ORDER BY eventDate ASC;";
+  $sql = "SELECT * FROM VUEvent WHERE attends = '0' AND private = '0' AND (eventDate BETWEEN 2020-06-9 AND '2020-06-30') ORDER BY eventDate ASC;";
   $result = mysqli_query($conn, $sql);
 
-  $invitationsSQL = "SELECT * FROM VUEvent WHERE attends = '0' AND private = '1' AND(eventDate BETWEEN CURDATE() AND '2020-06-30') ORDER BY eventDate ASC;";
+  $invitationsSQL = "SELECT * FROM VUEvent WHERE attends = '0' AND private = '1' AND(eventDate BETWEEN 2020-06-9 AND '2020-06-30') ORDER BY eventDate ASC;";
   $resultInvitations = mysqli_query($conn, $invitationsSQL);
   $numOfInvitations = mysqli_num_rows($resultInvitations);
 ?>
@@ -18,16 +18,16 @@
 
 <body>
   <h1>Social Space</h1>
-  <a class="back" href="../index.html">Back</a><br>
+  <a class="back" href="../index.html">&#8678;</a><br>
   <div class="grid">
     <div class="invitations">
         <?php
         if($numOfInvitations == 0){?>
-            <a href="invitedTo.php"><?php echo $numOfInvitations; ?> invitations</a><br>
+            <a href="invitedTo.php">invitations <?php echo $numOfInvitations; ?></a><br>
         <?php
         }
         else{?>
-        <a href="invitedTo.php"><span style="background-color:red; border-radius:3vw; padding: 1vw;"><?php echo $numOfInvitations; ?></span> invitations</a><br>
+        <a href="invitedTo.php">invitations <span style="background-color:red; border-radius:3vw; padding: 1vw;border: solid black;"><?php echo $numOfInvitations; ?></span></a><br>
         <?php
         }?>
     </div>

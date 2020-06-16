@@ -27,7 +27,7 @@
 </head>
 
   <body>
-    <a class="back" href="social_space.php">Back</a>
+    <a class="back" href="social_space.php">&#8678;</a>
     <div class="month">
     <ul>
       <li>June 2020<br></li>

@@ -8,14 +8,14 @@ a{
 
 .back{
   text-decoration: none;
-  float: left;
-  font-size: 5vw;
+  font-size: 7vw;
+  padding: 1vw 1.5vw;
   border: solid;
+  position:fixed;
+  top: 5vw;
+  left: 3vw;
   background-color: white;
-  margin-top: 5vw;
-  margin-left: 2.5vw;
-  padding: 1.5vw;
-  border-radius: 4vw;
+  border-radius: 3vw;
 }
 
 .daysInCalendar{
@@ -31,7 +31,7 @@ ul {list-style-type: none;}
 /* Month header */
 .month {
   padding: 25vw 10vw 10vw 10vw;
-  background: #1abc9c;
+  background: #6986BA;
   text-align: center;
 }
 

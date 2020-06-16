@@ -14,8 +14,15 @@
 
 <body>
   <h1>Submitted</h1>
-  <a class="back" href="menu.php">Back</a>
-  <table id="events">
+  <a class="back" href="menu.php">&#8678;</a>
+    <?php
+    if(mysqli_num_rows($result)==0){?>
+        <p><i>No assignments have been submitted yet. </i></p>
+    <?php
+    }
+    else{
+    ?>
+    <table id="events">
     <tr>
       <th><h4>Name:</h4></th>
       <th><h4>Deadline:</h4></th>
@@ -30,6 +37,7 @@
           <td class="overview"><a href="assignmentOverview.php?id=<?php echo $rows['id']?>">Overview</a></td>
         </tr>
     <?php
+        }
       }
     ?>
   </table>

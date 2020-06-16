@@ -1,6 +1,6 @@
 <?php
   include_once '../DBhandler/connection.php';
-  $sql = "SELECT * FROM assignment WHERE submitted = '0' AND deadline BETWEEN CURDATE() AND '2020-07-05' ORDER BY deadline ASC;";
+  $sql = "SELECT * FROM assignment WHERE submitted = '0' AND deadline BETWEEN '2020-06-07' AND '2020-07-05' ORDER BY deadline ASC;";
   $result = mysqli_query($conn, $sql);
 ?>
 
@@ -14,7 +14,7 @@
 
 <body>
   <h1>All toDo</h1>
-  <a class="back" href="menu.php">Back</a>
+  <a class="back" href="menu.php">&#8678;</a>
   <table id="events">
     <tr>
       <th><h4>Name:</h4></th>
